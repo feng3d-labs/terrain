@@ -22,6 +22,8 @@
         //
         "../../../feng3d/out/feng3d.d.ts",
         //
+        "../../assets/runtime/out/assets.d.ts",
+        //
         "../../../editor/libs/modules/egret/egret.d.ts",
         "../../../editor/libs/modules/eui/eui.d.ts",
         "../../../editor/libs/modules/res/res.d.ts",
