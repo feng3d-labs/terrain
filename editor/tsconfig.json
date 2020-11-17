@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "declarationMap": true,
+        "declaration": true,
+        "composite": true,
+        "experimentalDecorators": true,
+        "lib": [
+            "ES2015",
+            "DOM",
+        ],
+        "outFile": "out/particlesystem-editor.js",
+    },
+    "references": [
+        {
+            "path": "../runtime"
+        },
+    ],
+    "files": [
+        //
+        "../../../feng3d/out/feng3d.d.ts",
+        //
+        "../../../editor/libs/modules/egret/egret.d.ts",
+        "../../../editor/libs/modules/eui/eui.d.ts",
+        "../../../editor/libs/modules/res/res.d.ts",
+        "../../../editor/libs/modules/tween/tween.d.ts",
+        "../../../editor/libs/exml.e.d.ts",
+        "../../../editor/libs/jquery.d.ts",
+        //
+        "../../../editor/libs/jszip.d.ts",
+        "../../../editor/libs/FileSaver.d.ts",
+        "../../../editor/out/editor.d.ts",
+        //
+        "src/Index.ts",
+    ]
+}
