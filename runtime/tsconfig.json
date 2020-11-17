@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "declarationMap": true,
+        "declaration": true,
+        "composite": true,
+        "experimentalDecorators": true,
+        "lib": [
+            "ES2015",
+            "DOM",
+        ],
+        "outFile": "out/terrain.js",
+    },
+    "files": [
+        "../../../feng3d/out/feng3d.d.ts",
+        //地形
+        "src/TerrainGeometry.ts",
+        "src/TerrainMaterial.ts",
+        "src/TerrainMergeMethod.ts",
+        "src/TerrainData.ts",
+        "src/Terrain.ts",
+    ]
+}
