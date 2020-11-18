@@ -13,13 +13,9 @@
         ],
         "outFile": "out/terrain.js",
     },
-    "files": [
+    "include": [
         "../../../feng3d/out/feng3d.d.ts",
         //地形
-        "src/TerrainGeometry.ts",
-        "src/TerrainMaterial.ts",
-        "src/TerrainMergeMethod.ts",
-        "src/TerrainData.ts",
-        "src/Terrain.ts",
-    ]
+        "src/**/*.ts",
+    ],
 }
