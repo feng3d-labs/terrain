@@ -2,11 +2,11 @@
   "bundle": {
     "commonSourceDirectory": "..",
     "sourceFiles": [
-      "../src/Terrain.ts",
-      "../src/TerrainData.ts",
       "../src/TerrainGeometry.ts",
       "../src/TerrainMaterial.ts",
-      "../src/TerrainMergeMethod.ts"
+      "../src/TerrainMergeMethod.ts",
+      "../src/TerrainData.ts",
+      "../src/Terrain.ts"
     ],
     "js": {
       "sections": [

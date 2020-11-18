@@ -1,53 +1,4 @@
 declare namespace feng3d {
-    interface ComponentMap {
-        Terrain: Terrain;
-    }
-    /**
-     * The Terrain component renders the terrain.
-     */
-    class Terrain extends Renderable {
-        __class__: "feng3d.Terrain";
-        /**
-         * 地形资源
-         */
-        assign: TerrainData;
-        geometry: TerrainGeometry;
-        material: Material;
-    }
-    interface PrimitiveGameObject {
-        Terrain: GameObject;
-    }
-}
-declare namespace feng3d {
-    /**
-     * The TerrainData class stores heightmaps, detail mesh positions, tree instances, and terrain texture alpha maps.
-     *
-     * The Terrain component links to the terrain data and renders it.
-     */
-    class TerrainData {
-        /**
-         * Width of the terrain in samples(Read Only).
-         */
-        get heightmapWidth(): number;
-        /**
-         * Height of the terrain in samples(Read Only).
-         */
-        get heightmapHeight(): number;
-        /**
-         * Resolution of the heightmap.
-         */
-        heightmapResolution: number;
-        /**
-         * The size of each heightmap sample.
-         */
-        get heightmapScale(): Vector3;
-        /**
-         * The total size in world units of the terrain.
-         */
-        size: Vector3;
-    }
-}
-declare namespace feng3d {
     interface GeometryTypes {
         TerrainGeometry: TerrainGeometry;
     }
@@ -146,6 +97,55 @@ declare namespace feng3d {
          */
         constructor();
         beforeRender(renderAtomic: RenderAtomic): void;
+    }
+}
+declare namespace feng3d {
+    /**
+     * The TerrainData class stores heightmaps, detail mesh positions, tree instances, and terrain texture alpha maps.
+     *
+     * The Terrain component links to the terrain data and renders it.
+     */
+    class TerrainData {
+        /**
+         * Width of the terrain in samples(Read Only).
+         */
+        get heightmapWidth(): number;
+        /**
+         * Height of the terrain in samples(Read Only).
+         */
+        get heightmapHeight(): number;
+        /**
+         * Resolution of the heightmap.
+         */
+        heightmapResolution: number;
+        /**
+         * The size of each heightmap sample.
+         */
+        get heightmapScale(): Vector3;
+        /**
+         * The total size in world units of the terrain.
+         */
+        size: Vector3;
+    }
+}
+declare namespace feng3d {
+    interface ComponentMap {
+        Terrain: Terrain;
+    }
+    /**
+     * The Terrain component renders the terrain.
+     */
+    class Terrain extends Renderable {
+        __class__: "feng3d.Terrain";
+        /**
+         * 地形资源
+         */
+        assign: TerrainData;
+        geometry: TerrainGeometry;
+        material: Material;
+    }
+    interface PrimitiveGameObject {
+        Terrain: GameObject;
     }
 }
 //# sourceMappingURL=terrain.d.ts.map
