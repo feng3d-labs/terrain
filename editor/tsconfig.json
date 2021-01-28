@@ -11,7 +11,7 @@
             "ES2015",
             "DOM",
         ],
-        "outFile": "out/particlesystem-editor.js",
+        "outFile": "out/terrain-editor.js",
     },
     "references": [
         {
