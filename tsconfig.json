@@ -1,11 +1,27 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "editor"
+    "compilerOptions": {
+        "target": "ES5",
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "declarationMap": true,
+        "declaration": true,
+        "composite": true,
+        "experimentalDecorators": true,
+        "lib": [
+            "ES2017",
+            "DOM"
+        ],
+        "outFile": "./dist/index.js",
+        "types": [
+            "feng3d"
+        ]
     },
-    {
-      "path": "runtime"
-    },
-  ]
+    "files": [
+        //地形
+        "src/TerrainGeometry.ts",
+        "src/TerrainMaterial.ts",
+        "src/TerrainMergeMethod.ts",
+        "src/TerrainData.ts",
+        "src/Terrain.ts",
+    ]
 }
