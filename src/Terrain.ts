@@ -22,13 +22,13 @@ namespace feng3d
         material = Material.getDefault("Terrain-Material");
     }
 
-    GameObject.registerPrimitive("Terrain", (g) =>
+    Entity.registerPrimitive("Terrain", (g) =>
     {
-        g.addComponent("Terrain");
+        g.addComponent(feng3d.Terrain);
     });
 
-    export interface PrimitiveGameObject
+    export interface PrimitiveEntity
     {
-        Terrain: GameObject;
+        Terrain: Entity;
     }
 }

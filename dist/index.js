@@ -319,7 +319,7 @@ var feng3d;
             renderAtomic.uniforms.u_lod0vec = new feng3d.Vector4(0.5, 1, 0, 0);
         };
         return TerrainMergeMethod;
-    }(feng3d.EventDispatcher));
+    }(feng3d.EventEmitter));
     feng3d.TerrainMergeMethod = TerrainMergeMethod;
 })(feng3d || (feng3d = {}));
 var feng3d;
@@ -472,8 +472,8 @@ var feng3d;
         return Terrain;
     }(feng3d.Renderable));
     feng3d.Terrain = Terrain;
-    feng3d.GameObject.registerPrimitive("Terrain", function (g) {
-        g.addComponent("Terrain");
+    feng3d.Entity.registerPrimitive("Terrain", function (g) {
+        g.addComponent(feng3d.Terrain);
     });
 })(feng3d || (feng3d = {}));
 //# sourceMappingURL=index.js.map

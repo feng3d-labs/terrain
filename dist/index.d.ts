@@ -10,7 +10,7 @@ declare namespace feng3d {
         /**
          * 高度图路径
          */
-        heightMap: Texture2D;
+        heightMap: Texture2D<Texture2DEventMap>;
         /**
          * 地形宽度
          */
@@ -75,10 +75,10 @@ declare namespace feng3d {
     }
     class TerrainUniforms extends StandardUniforms {
         __class__: "feng3d.TerrainUniforms";
-        s_splatTexture1: Texture2D;
-        s_splatTexture2: Texture2D;
-        s_splatTexture3: Texture2D;
-        s_blendTexture: Texture2D;
+        s_splatTexture1: Texture2D<Texture2DEventMap>;
+        s_splatTexture2: Texture2D<Texture2DEventMap>;
+        s_splatTexture3: Texture2D<Texture2DEventMap>;
+        s_blendTexture: Texture2D<Texture2DEventMap>;
         u_splatRepeats: Vector4;
     }
     interface DefaultMaterial {
@@ -89,9 +89,9 @@ declare namespace feng3d {
     /**
      * 地形材质
      */
-    class TerrainMergeMethod extends EventDispatcher {
-        splatMergeTexture: Texture2D;
-        blendTexture: Texture2D;
+    class TerrainMergeMethod extends EventEmitter {
+        splatMergeTexture: Texture2D<Texture2DEventMap>;
+        blendTexture: Texture2D<Texture2DEventMap>;
         splatRepeats: Vector4;
         /**
          * 构建材质
@@ -145,8 +145,8 @@ declare namespace feng3d {
         geometry: TerrainGeometry;
         material: Material;
     }
-    interface PrimitiveGameObject {
-        Terrain: GameObject;
+    interface PrimitiveEntity {
+        Terrain: Entity;
     }
 }
 //# sourceMappingURL=index.d.ts.map
