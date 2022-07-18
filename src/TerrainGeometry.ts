@@ -167,6 +167,8 @@ namespace feng3d
             this.positions = vertices;
             this.uvs = uvs;
             this.indices = indices;
+            this.normals = geometryUtils.createVertexNormals(this.indices, this.positions, true);
+            this.tangents = geometryUtils.createVertexTangents(this.indices, this.positions, this.uvs, true)
         }
 
 		/**

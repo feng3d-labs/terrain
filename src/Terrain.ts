@@ -19,16 +19,33 @@ namespace feng3d
 
         geometry = Geometry.getDefault("Terrain-Geometry");
 
-        material = Material.getDefault("Terrain-Material");
+        constructor()
+        {
+            super();
+            this.material = Material.getDefault("Terrain-Material");
+        }
     }
 
-    Entity.registerPrimitive("Terrain", (g) =>
+    GameObject.registerPrimitive("Terrain", (g) =>
     {
-        g.addComponent(feng3d.Terrain);
+        g.addComponent(Terrain);
     });
 
-    export interface PrimitiveEntity
+    export interface PrimitiveGameObject
     {
-        Terrain: Entity;
+        Terrain: GameObject;
     }
+
+    // 在 Hierarchy 界面新增右键菜单项
+    createNodeMenu.push(
+        {
+            path: "3D Object/Terrain",
+            priority: -20000,
+            click: () =>
+            {
+                return GameObject.createPrimitive("Terrain");
+            }
+        }
+    );
+
 }
