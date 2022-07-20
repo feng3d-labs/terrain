@@ -15,9 +15,6 @@
     },
     "references": [
         {
-            "path": "../polyfill"
-        },
-        {
             "path": "../objectview"
         },
         {
@@ -42,6 +39,7 @@
     "files": [
         //
         "../event/index.d.ts",
+        "../polyfill/index.d.ts",
         //地形
         "src/TerrainGeometry.ts",
         "src/TerrainMaterial.ts",
