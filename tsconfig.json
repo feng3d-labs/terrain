@@ -15,9 +15,6 @@
     },
     "references": [
         {
-            "path": "../watcher"
-        },
-        {
             "path": "../serialization"
         },
         {
@@ -38,6 +35,7 @@
         "../event/index.d.ts",
         "../polyfill/index.d.ts",
         "../objectview/index.d.ts",
+        "../watcher/index.d.ts",
         //地形
         "src/TerrainGeometry.ts",
         "src/TerrainMaterial.ts",
