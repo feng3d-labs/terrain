@@ -1,34 +1,25 @@
 {
     "compilerOptions": {
         "target": "ES5",
+        "module": "CommonJS",
         "noImplicitAny": false,
         "sourceMap": true,
         "declarationMap": true,
         "declaration": true,
-        "composite": true,
         "experimentalDecorators": true,
         "lib": [
-            "ES2017",
-            "DOM"
+            "ES2015",
+            "DOM",
         ],
-        "outFile": "./dist/index.js",
+        "outDir": "lib"
     },
-    "files": [
-        //
-        "../event/index.d.ts",
-        "../polyfill/index.d.ts",
-        "../objectview/index.d.ts",
-        "../watcher/index.d.ts",
-        "../serialization/index.d.ts",
-        "../math/index.d.ts",
-        "../filesystem/index.d.ts",
-        "../renderer/index.d.ts",
-        "../core/index.d.ts",
-        //地形
-        "src/TerrainGeometry.ts",
-        "src/TerrainMaterial.ts",
-        "src/TerrainMergeMethod.ts",
-        "src/TerrainData.ts",
-        "src/Terrain.ts",
-    ]
+    "include": [
+        "src/**/*.ts"
+    ],
+    "ts-node": {
+        "files": true,
+        "compilerOptions": {
+            "esModuleInterop": true
+        }
+    }
 }
