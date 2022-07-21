@@ -13,11 +13,6 @@
         ],
         "outFile": "./dist/index.js",
     },
-    "references": [
-        {
-            "path": "../core"
-        },
-    ],
     "files": [
         //
         "../event/index.d.ts",
@@ -28,6 +23,7 @@
         "../math/index.d.ts",
         "../filesystem/index.d.ts",
         "../renderer/index.d.ts",
+        "../core/index.d.ts",
         //地形
         "src/TerrainGeometry.ts",
         "src/TerrainMaterial.ts",
