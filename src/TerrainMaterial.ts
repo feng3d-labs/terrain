@@ -1,38 +1,47 @@
-namespace feng3d
+import { Material, StandardUniforms, Texture2D } from '@feng3d/core';
+import { Vector4 } from '@feng3d/math';
+import { oav } from '@feng3d/objectview';
+import { shaderConfig } from '@feng3d/renderer';
+import { serialize } from '@feng3d/serialization';
+
+declare global
 {
-    export interface UniformsTypes { terrain: TerrainUniforms }
-
-    export class TerrainUniforms extends StandardUniforms
+    export interface MixinsUniformsTypes
     {
-        __class__: "feng3d.TerrainUniforms";
-
-        @serialize
-        @oav({ block: "terrain" })
-        s_splatTexture1 = Texture2D.default;
-
-        @serialize
-        @oav({ block: "terrain" })
-        s_splatTexture2 = Texture2D.default;
-
-        @serialize
-        @oav({ block: "terrain" })
-        s_splatTexture3 = Texture2D.default;
-
-        @serialize
-        @oav({ block: "terrain" })
-        s_blendTexture = Texture2D.default;
-
-        @serialize
-        @oav({ block: "terrain" })
-        u_splatRepeats = new Vector4(1, 1, 1, 1);
+        terrain: TerrainUniforms
     }
 
-    shaderConfig.shaders["terrain"].cls = TerrainUniforms;
-
-    export interface DefaultMaterial
+    export interface MixinsDefaultMaterial
     {
-        "Terrain-Material": Material;
+        'Terrain-Material': Material;
     }
-
-    Material.setDefault("Terrain-Material", { shaderName: "terrain" });
 }
+
+export class TerrainUniforms extends StandardUniforms
+{
+    declare __class__: 'feng3d.TerrainUniforms';
+
+    @serialize
+    @oav({ block: 'terrain' })
+    s_splatTexture1 = Texture2D.default;
+
+    @serialize
+    @oav({ block: 'terrain' })
+    s_splatTexture2 = Texture2D.default;
+
+    @serialize
+    @oav({ block: 'terrain' })
+    s_splatTexture3 = Texture2D.default;
+
+    @serialize
+    @oav({ block: 'terrain' })
+    s_blendTexture = Texture2D.default;
+
+    @serialize
+    @oav({ block: 'terrain' })
+    u_splatRepeats = new Vector4(1, 1, 1, 1);
+}
+
+shaderConfig.shaders['terrain'].cls = TerrainUniforms;
+
+Material.setDefault('Terrain-Material', { shaderName: 'terrain' });
